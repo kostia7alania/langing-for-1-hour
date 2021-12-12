@@ -7,7 +7,7 @@ export default {
     interval: 2000,
   },
   server: {
-    host: '192.168.1.237',
+    host: '0.0.0.0',
   },
   // router: {
   //   base: '/',
