@@ -38,7 +38,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 .app-main {
-  font-family: 'DM Sans', 'Open Sans', Arial, sans-serif;
+  font-family: 'ABeeZee', 'DM Sans', 'Open Sans', Arial, sans-serif;
 }
 body {
   margin: 0;
@@ -58,13 +58,14 @@ body {
   }
 }
 
-$primary-color: #416ff4;
+$primary-color: theme('colors.primary');
 .bg-color-primary {
   background-color: $primary-color;
 }
 
 .link--active {
   color: $primary-color;
+  font-style: italic;
 }
 
 .text-black-2 {
@@ -110,11 +111,11 @@ $primary-color: #416ff4;
   }
 
   .tw-bg-white {
-    background-color: #2d3748;
+    background-color: #080211;
   }
 
   [fill='white'] {
-    fill: #2d3748;
+    fill: white;
   }
 
   .fix-svg-dark-back [fill='white'] {
@@ -194,4 +195,11 @@ $primary-color: #416ff4;
 }
 ::selection:window-inactive {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
 }

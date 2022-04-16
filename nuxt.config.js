@@ -44,7 +44,7 @@ export default {
   // },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'H5 Official Site',
+    title: 'Poker Official Site',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -107,7 +107,48 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/i18n',
   ],
+  i18n: {
+     locales: [
+      {
+        code: 'zh',
+        name: 'Chinese',
+        file: 'zh-CH.js',
+      },
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en-US.js',
+      },
+      {
+        code: 'pt',
+        name: 'Portugues',
+        file: 'pt-BR.js',
+      },
+    ],
+    lazy: true,
+    langDir: 'locales/',
+    defaultLocale: 'zh',
+
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        zh: {
+          // Chinese
+          // welcome: 'Bienvenue'
+        },
+        en: {
+          // English
+          // welcome: 'Welcome'
+        },
+        pt: {
+          // Portugues
+          // welcome: 'Bienvenido'
+        }
+      }
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
@@ -115,7 +156,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      name: 'H5 Official Site 🎉',
+      name: 'Poker Official Site 🎉',
       lang: 'en',
     },
   },

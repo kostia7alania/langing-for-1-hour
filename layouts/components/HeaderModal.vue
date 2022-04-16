@@ -61,7 +61,7 @@ export default defineComponent({
   props: {
     width: {
       type: [String, Number],
-      default: '333px',
+      default: '213px',
     },
     height: {
       type: [String, Number],
@@ -94,6 +94,11 @@ export default defineComponent({
 })
 </script>
 
+<style lang="scss" scoped>
+.tw-modal-container {
+  @apply tw-rounded-sm tw-border-primary tw-border;
+}
+</style>
 <style lang="scss">
 .the-modal {
   transition: opacity 0.25s ease;

@@ -8,12 +8,12 @@ export function doAnimate(): void {
   if (!process.client) return
   gsap.registerPlugin(ScrollTrigger)
 
-  gsap.to('.logo-wrapper', {
-    scrollTrigger: '.logo-wrapper',
-    x: 0,
-    rotation: 360,
-    duration: 3,
-  })
+  // gsap.to('.logo-wrapper', {
+  //   scrollTrigger: '.logo-wrapper',
+  //   x: 0,
+  //   rotation: 360,
+  //   duration: 3,
+  // })
 
   batchAnimate('.anim-batch-once')
   // NOTE: it must be opacity: 0

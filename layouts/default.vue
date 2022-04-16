@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div v-if="!isInit" class="tw-w-full tw-h-screen tw-flex">
+    <div v-if="!isInit" class="tw-bg-black tw-w-full tw-h-screen tw-flex">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
-        style="margin: auto; background: #fff; display: block"
+        style="margin: auto; display: block"
         width="200px"
         height="200px"
         viewBox="0 0 100 100"
@@ -70,7 +70,7 @@
         </circle>
       </svg>
     </div>
-    <div v-if="isInit" class="dark:tw-bg-gray-800">
+    <div v-if="isInit" class="dark:tw-bg-black">
       <div class="main-header"></div>
       <div class="tw-fixed tw-top-0 tw-left-0 tw-right-0 tw-z-50">
         <MainHeader class="main-header max-layout-width tw-mx-auto" />

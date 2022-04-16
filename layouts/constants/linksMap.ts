@@ -1,12 +1,21 @@
 // type ILinksMap = Array<{ title: string; id: string }>
 
+// Home
+// Download
+// About us
+// ---
+// 中文简体
+// English
+// Português
+
 export const linksMap = [
-  { title: 'Top', id: '#section-1' },
-  { title: 'About Us', id: '#section-2' },
-  { title: 'Technology products', id: '#section-3' },
-  { title: 'Team', id: '#section-4' },
-  { title: 'Join Us', id: '#section-5' },
-  { title: 'Contacts', id: '#section-6' },
+  { title: 'Home', id: '#section-1', type: 'anchor' },
+  { title: 'Download', id: '#section-2', type: 'anchor' },
+  { title: 'About us', id: '#section-3', type: 'anchor' },
+  // { type: 'break' },
+  // { title: '中文简体', type: 'language' },
+  // { title: 'English', type: 'language' },
+  // { title: 'Português', type: 'language' },
 ]
 const reversedLinksMap = [...linksMap].reverse()
 
@@ -14,6 +23,7 @@ export const findLink = (position: number) => {
   if (position < 200) return linksMap[0] // fix first item on mobile
 
   const foundLink = reversedLinksMap.find(({ id }) => {
+    // @ts-ignore
     const sectionDom = document.querySelector(id) as HTMLElement
     const { offsetTop: sectionTop, clientHeight: sectionHeight } = sectionDom
     if (position >= sectionTop - 100 - sectionHeight / 3) return true

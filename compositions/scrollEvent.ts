@@ -32,7 +32,8 @@ export function useScrollEventTop() {
   const onScrollTop = (position: number) => {
     // top menu
     const foundLink = findLink(position)
-    if (foundLink) setActiveLink(foundLink.id)
+    // @ts-ignore
+    if (foundLink) setActiveLink(foundLink?.id)
     // window.pageYOffset => is => e.position
     // console.log(el, target?.offsetHeight, arguments, event);
   }
